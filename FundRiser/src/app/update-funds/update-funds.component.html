@@ -1,0 +1,21 @@
+<h3>Edit Donor</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Donor Id</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="funds.id" name="id">
+    </div>
+ 
+    <div class="form-group">
+      <label for="name">DonorName</label>
+      <input type="text" class="form-control" id="donorName" required [(ngModel)]="funds.donorName" name="donorName">
+    </div>
+ 
+    <div class="form-group">
+      <label for="name">Amount</label>
+      <input type="text" class="form-control" id="amount" required [(ngModel)]="funds.amount" name="amount">
+    </div>
+ 
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

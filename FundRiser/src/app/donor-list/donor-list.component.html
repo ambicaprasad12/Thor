@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Donor List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Donor Id</th>
+            <th>Donor Name</th>
+            <th>Amount</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fund of funds | async">
+            <td>{{fund.id}}</td>
+            <td>{{fund.donorName}}</td>
+            <td>{{fund.amount}}</td>
+            <td>
+              <button (click)="deleteFunds(fund.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateFunds(fund.id)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+                <button (click)="fundDetails(fund.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

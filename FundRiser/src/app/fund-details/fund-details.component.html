@@ -1,0 +1,18 @@
+<h2>Donor Details</h2> 
+
+<hr/>
+<div *ngIf="funds">
+  <div>
+    <label><b>Donor Id: </b></label> {{funds.id}}
+  </div>
+  <div>
+    <label><b>DonorName: </b></label> {{funds.donorName}}
+  </div>
+  <div>
+    <label><b>Amount: </b></label> {{funds.amount}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Home</button><br>
